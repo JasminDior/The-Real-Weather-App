@@ -1,0 +1,189 @@
+html {
+  font-family: sans-serif; // 2
+  line-height: 1.15; // 3
+  -webkit-text-size-adjust: 100%; // 4
+  -webkit-tap-highlight-color: rgba($black, 0); // 5
+}
+body {
+  margin: 0; // 1
+  font-family: $font-family-base;
+  @include font-size($font-size-base);
+  font-weight: $font-weight-base;
+  line-height: $line-height-base;
+  color: $body-color;
+  text-align: left; // 3
+  background-color: $body-bg; // 2
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: $headings-margin-bottom;
+}
+p {
+  margin-top: 0;
+  margin-bottom: $paragraph-margin-bottom;
+}
+abbr[title],
+abbr[data-original-title] {
+  // 1
+  text-decoration: underline; // 2
+  text-decoration: underline dotted; // 2
+  cursor: help; // 3
+  border-bottom: 0; // 4
+  text-decoration-skip-ink: none; // 5
+}
+
+address {
+  margin-bottom: 1rem;
+  font-style: normal;
+  line-height: inherit;
+}
+
+ol,
+ul,
+dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0;
+}
+
+dt {
+  font-weight: $dt-font-weight;
+}
+
+dd {
+  margin-bottom: 0.5rem;
+  margin-left: 0; // Undo browser default
+}
+
+blockquote {
+  margin: 0 0 1rem;
+}
+
+b,
+strong {
+  font-weight: $font-weight-bolder; // Add the correct font weight in Chrome, Edge, and Safari
+}
+
+small {
+  @include font-size(80%); // Add the correct font size in all browsers
+}
+
+//
+// Prevent `sub` and `sup` elements from affecting the line height in
+// all browsers.
+//
+
+sub,
+sup {
+  position: relative;
+  @include font-size(75%);
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+
+//
+// Links
+//
+
+a {
+  color: $link-color;
+  text-decoration: $link-decoration;
+  background-color: transparent; // Remove the gray background on active links in IE 10.
+
+  @include hover() {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+}
+table {
+  border-collapse: collapse; // Prevent double borders
+}
+
+caption {
+  padding-top: $table-cell-padding;
+  padding-bottom: $table-cell-padding;
+  color: $table-caption-color;
+  text-align: left;
+  caption-side: bottom;
+}
+button:focus:not(:focus-visible) {
+  outline: 0;
+}
+
+input,
+button,
+select,
+optgroup,
+textarea {
+  margin: 0; // Remove the margin in Firefox and Safari
+  font-family: inherit;
+  @include font-size(inherit);
+  line-height: inherit;
+}
+
+button,
+input {
+  overflow: visible; // Show the overflow in Edge
+}
+
+button,
+select {
+  text-transform: none; // Remove the inheritance of text transform in Firefox
+}
+legend {
+  display: block;
+  width: 100%;
+  max-width: 100%; // 1
+  padding: 0;
+  margin-bottom: 0.5rem;
+  @include font-size(1.5rem);
+  line-height: inherit;
+  color: inherit; // 2
+  white-space: normal; // 1
+}
+
+progress {
+  vertical-align: baseline; // Add the correct vertical alignment in Chrome, Firefox, and Opera.
+}
+
+// Correct the cursor style of increment and decrement buttons in Chrome.
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+output {
+  display: inline-block;
+}
+
+summary {
+  display: list-item; // Add the correct display in all browsers
+  cursor: pointer;
+}
+
+template {
+  display: none; // Add the correct display in IE
+}
+
+// Always hide an element with the `hidden` HTML attribute (from PureCSS).
+// Needed for proper display in IE 10-.
+[hidden] {
+  display: none !important;
+}
