@@ -1,83 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width,initial-scale=1">
-   <meta name="theme-color" content="#000000">
-   <meta name="description" content="Weather application">
-   <link rel="manifest" href="/manifest.json">
-   <title>The Real Weather App</title>
-   <link href="/static/css/2.a5f06b7f.chunk.css" rel="stylesheet">
-   <link href="/static/css/main.0680debd.chunk.css" rel="stylesheet">
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Weather application" />
+    <link rel="manifest" href="/manifest.json" />
+    <title>The Real Weather App</title>
+    <link href="/static/css/2.a5f06b7f.chunk.css" rel="stylesheet" />
+    <link href="/static/css/main.0680debd.chunk.css" rel="stylesheet" />
+  </head>
 
-    <body cz-shortcut-listen="true">
-      <noscript>You need to enable JavaScript to run this app.</noscript>
-      <div id="root">
-        <div class="App">
-          <div class="container">
-            <div class="Weather">
-              <a href="https://www.shecodes.io/" target="_blank" rel="noopener noreferrer">
-               </a>
-               <form>
-                 <div class="row">
-                   <div class="col-9 ">
-                     <input type="search" placeholder="Enter a city.." class="form-control search-input">
-                    </div>
-                    <div class="col-3 p-0">
-                      <input type="submit" class="btn btn-primary w-100" value="Search">
+  <body cz-shortcut-listen="true">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+      <div class="App">
+        <div class="container">
+          <div class="Weather">
+            <a
+              href="https://www.shecodes.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+            </a>
+            <form>
+              <div class="row">
+                <div class="col-9">
+                  <input
+                    type="search"
+                    placeholder="Enter a city.."
+                    class="form-control search-input"
+                  />
+                </div>
+                <div class="col-3 p-0">
+                  <input
+                    type="submit"
+                    class="btn btn-primary w-100"
+                    value="Search"
+                  />
+                </div>
+              </div>
+            </form>
+            <div class="WeatherInfo">
+              <div class="row">
+                <div class="col-6">
+                  <h1>Austin</h1>
+                  <ul>
+                    <li><span>Sunday 13:00</span>, clear sky</li>
+                    <li>
+                      Humidity: <strong>30%</strong>, Wind:
+                      <strong>1.34km/h</strong>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-6">
+                  <div class="temperature-container d-flex justify-content-end">
+                    <canvas width="52" height="52"></canvas>
+                    <div>
+                      <span class="temperature">14</span>
+                      <span class="unit">°C</span>
                     </div>
                   </div>
-                </form><div class="WeatherInfo">
-                  <div class="row">
-                    <div class="col-6">
-                      <h1>Austin</h1>
-                      <ul>
-                        <li>
-                          <span>Sunday 13:00</span>, clear sky</li>
-                          <li>Humidity: <strong>30%</strong>, Wind: <strong>1.34km/h</strong></li>
-                        </ul>
-                      </div>
-                      <div class="col-6">
-                        <div class="temperature-container d-flex justify-content-end">
-                          <canvas width="52" height="52"></canvas>
-                          <div><span class="temperature">14</span>
-                            <span class="unit">°C</span>
-                          </div></div></div></div></div>
-                          <div class="WeatherForecast row">
-                            <div class="col">
-                              <div class="WeatherForecastPreview">
-                                <div class="forecast-time">Sun</div>
-                                <canvas width="38" height="38"></canvas>
-                                <div class="forecast-temperature">
-                                  <span class="forecast-temperature-max">17°</span>
-                                  <span class="forecast-temperature-min">4°</span></div></div></div>
-                                  <div class="col"><div class="WeatherForecastPreview">
-                                    <div class="forecast-time">Mon</div><canvas width="38" height="38"></canvas>
-                                    <div class="forecast-temperature"><span class="forecast-temperature-max">19°</span>
-                                      <span class="forecast-temperature-min">7°</span></div></div></div>
-                                      <div class="col"><div class="WeatherForecastPreview">
-                                        <div class="forecast-time">Tue</div><canvas width="38" height="38"></canvas>
-                                        <div class="forecast-temperature"><span class="forecast-temperature-max">22°</span>
-                                          <span class="forecast-temperature-min">8°</span></div></div></div>
-                                          <div class="col"><div class="WeatherForecastPreview"><div class="forecast-time">Wed</div>
-                                          <canvas width="38" height="38"></canvas><div class="forecast-temperature">
-                                            <span class="forecast-temperature-max">19°</span>
-                                            <span class="forecast-temperature-min">15°</span></div></div></div>
-                                            <div class="col"><div class="WeatherForecastPreview">
-                                              <div class="forecast-time">Thu</div><canvas width="38" height="38"></canvas>
-                                              <div class="forecast-temperature"><span class="forecast-temperature-max">20°</span>
-                                                <span class="forecast-temperature-min">9°</span></div></div></div></div>
-                                                <footer>
-                                                  This project was coded with the help of <a href="https://www.shecodes.io/" target="_blank" rel="noopener noreferrer">SheCodes</a> 
-                                                  </footer>
-                                                </div></div></div></div>
-                                              
-                                                </body>
-    
-     
-    
-
-  
+                </div>
+              </div>
+            </div>
+            <div class="WeatherForecast row">
+              <div class="col">
+                <div class="WeatherForecastPreview">
+                  <div class="forecast-time">Sun</div>
+                  <canvas width="38" height="38"></canvas>
+                  <div class="forecast-temperature">
+                    <span class="forecast-temperature-max">17°</span>
+                    <span class="forecast-temperature-min">4°</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="WeatherForecastPreview">
+                  <div class="forecast-time">Mon</div>
+                  <canvas width="38" height="38"></canvas>
+                  <div class="forecast-temperature">
+                    <span class="forecast-temperature-max">19°</span>
+                    <span class="forecast-temperature-min">7°</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="WeatherForecastPreview">
+                  <div class="forecast-time">Tue</div>
+                  <canvas width="38" height="38"></canvas>
+                  <div class="forecast-temperature">
+                    <span class="forecast-temperature-max">22°</span>
+                    <span class="forecast-temperature-min">8°</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="WeatherForecastPreview">
+                  <div class="forecast-time">Wed</div>
+                  <canvas width="38" height="38"></canvas>
+                  <div class="forecast-temperature">
+                    <span class="forecast-temperature-max">19°</span>
+                    <span class="forecast-temperature-min">15°</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="WeatherForecastPreview">
+                  <div class="forecast-time">Thu</div>
+                  <canvas width="38" height="38"></canvas>
+                  <div class="forecast-temperature">
+                    <span class="forecast-temperature-max">20°</span>
+                    <span class="forecast-temperature-min">9°</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <footer>
+              This project was coded with the help of
+              <a
+                href="https://www.shecodes.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >SheCodes</a
+              >
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src.app.js"></script>
   </body>
 </html>
