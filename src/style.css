@@ -40,7 +40,22 @@ li {
   text-align: left;
   font-weight: normal;
 }
-
+.weather-temp img {
+  margin-right: 10px;
+  height: 64px;
+  width: 64px;
+}
+.weather-temp strong {
+  color: black;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1;
+}
+weather-temp .units {
+  position: relative;
+  font-size: 16px;
+  top: -32px;
+}
 dd {
   margin-bottom: 0.5rem;
   margin-left: 0;
