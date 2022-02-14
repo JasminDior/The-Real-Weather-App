@@ -51,10 +51,14 @@ li {
   font-weight: 400;
   line-height: 1;
 }
-weather-temp .units {
+.units {
   position: relative;
   font-size: 16px;
   top: -32px;
+}
+
+.overview {
+  margin-bottom: 10px;
 }
 dd {
   margin-bottom: 0.5rem;
