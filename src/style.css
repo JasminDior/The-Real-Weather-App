@@ -38,6 +38,7 @@ li {
   font-weight: 100;
   line-height: 19px;
   text-align: left;
+  text-transform: capitalize;
   font-weight: normal;
 }
 .weather-temp img {
