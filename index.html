@@ -11,17 +11,20 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
+
     <title>The Real Weather App</title>
   </head>
   <body>
     <div class="container">
       <div class="weather-app">
         <div class="overview">
-          <h1>Raleigh</h1>
+          <h1 id="city"></h1>
           <ul>
             <li>Friday 5:00</li>
-            <li>Cloudy</li>
+            <li id="description"></li>
           </ul>
         </div>
         <div class="row">
@@ -33,7 +36,7 @@
                 class="float-left"
               />
               <div class="float-left">
-                <strong>41</strong>
+                <strong id="temperature"> </strong>
                 <span class="units">°F / <a href="#">°C</a></span>
               </div>
             </div>
@@ -56,7 +59,6 @@
         </div>
       </div>
     </div>
-
-    <script src="src.app.js"></script>
   </body>
+  <script src="src.app.js"></script>
 </html>
