@@ -38,8 +38,11 @@ li {
   font-weight: 100;
   line-height: 19px;
   text-align: left;
-  text-transform: capitalize;
+
   font-weight: normal;
+}
+li::first-letter {
+  text-transform: capitalize;
 }
 .weather-temp img {
   margin-right: 10px;
