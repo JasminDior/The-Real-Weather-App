@@ -2,19 +2,25 @@ body {
   margin: 0;
   font-family: sans-serif;
   font-weight: normal;
-  color: blueviolet;
+  color: #132743;
   text-align: left;
-  background-color: yellowgreen;
+  background: radial-gradient(
+    circle at 7.5% 24%,
+    rgb(237, 161, 193) 0%,
+    rgb(250, 178, 172) 25.5%,
+    rgb(190, 228, 210) 62.3%,
+    rgb(215, 248, 247) 93.8%
+  );
 }
 .weather-app {
   max-width: 600px;
   margin: 30px auto;
   padding: 20px;
-  border: 1px solid black;
+  border: 1px solid #132743;
   border-radius: 10px;
 }
 h1 {
-  color: rgb(32, 33, 36);
+  color: #132743;
   display: block;
   font-family: arial, sans-serif;
   font-size: 30px;
@@ -24,7 +30,7 @@ h1 {
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(black, 0);
+  -webkit-tap-highlight-color: rgba(#132743, 0);
 }
 ul {
   margin: 0;
@@ -32,7 +38,7 @@ ul {
 }
 li {
   list-style: none;
-  color: black;
+  color: #132743;
   display: block;
   font-size: 16px;
   font-weight: 100;
@@ -50,7 +56,7 @@ li::first-letter {
   width: 64px;
 }
 .weather-temp strong {
-  color: black;
+  color: #132743;
   font-size: 48px;
   font-weight: 400;
   line-height: 1;
