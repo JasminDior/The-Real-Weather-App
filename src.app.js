@@ -47,10 +47,18 @@ function handleSubmit(event) {
   event.preventDefault();
   let cityInputElement = document.querySelector("#city-input");
   search(cityInputElement.value);
-  console.log(cityInputElement);
 }
 
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  let celsiusTemperature = ((temperatureElement.innerHTML - 32) * 5) / 9;
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
 search("Atlanta");
 
 let form = document.querySelector("#search-form");
 form.addEventListener("Submit", handleSubmit);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
