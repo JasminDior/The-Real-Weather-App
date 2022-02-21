@@ -34,10 +34,23 @@ function displayTemperature(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
+}
+function search(city) {
+  let apiKey = "15dc396ba08536ce424f26fbc76e79a9";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+
+  axios.get(apiUrl).then(displayTemperature);
 }
 
-let apiKey = "15dc396ba08536ce424f26fbc76e79a9";
-let city = "Raleigh";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+  console.log(cityInputElement);
+}
 
-axios.get(apiUrl).then(displayTemperature);
+search("Atlanta");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("Submit", handleSubmit);
